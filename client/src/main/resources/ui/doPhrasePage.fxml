@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="battleship.controller.DoPhrasePageController">
+   <children>
+      <ImageView fitHeight="763.0" fitWidth="924.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pic/paper.jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="boardTextView" prefHeight="600.0" prefWidth="924.0">
+         <children>
+            <AnchorPane fx:id="resultPane" layoutX="63.0" layoutY="121.0" prefHeight="434.0" prefWidth="778.0">
+               <children>
+                  <Label fx:id="promptStr" layoutX="26.0" layoutY="8.0" prefHeight="236.0" prefWidth="441.0" text="Where do you want to Place Battleship?" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="userText" layoutX="107.0" layoutY="345.0" onAction="#getUserInput" promptText="i.e A0V" />
+                  <Button fx:id="placeButton" layoutX="295.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#placeTheShip" prefHeight="37.0" prefWidth="70.0" text="Place">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="finishButton" layoutX="128.0" layoutY="402.0" mnemonicParsing="false" onMouseClicked="#onFinishButton" text="Finish">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="playerInfo" layoutX="84.0" layoutY="231.0" prefHeight="93.0" prefWidth="281.0" text="Label" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <GridPane fx:id="gridPane" layoutX="345.0" layoutY="-43.0" prefHeight="493.0" prefWidth="329.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                  </GridPane>
+               </children></AnchorPane>
+            <Label fx:id="waitInfo" layoutX="465.0" layoutY="565.0" text="Waiting the other Player to Finish the Placement..." visible="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

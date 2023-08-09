@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="battleship.controller.GameResultPageController">
+   <children>
+      <ImageView fitHeight="763.0" fitWidth="924.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pic/paper.jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="boardTextView" prefHeight="700.0" prefWidth="924.0">
+         <children>
+            <AnchorPane fx:id="resultPane" layoutX="63.0" layoutY="121.0" prefHeight="434.0" prefWidth="778.0">
+               <children>
+                  <Label fx:id="playerInfo" layoutX="260.0" layoutY="56.0" prefHeight="257.0" prefWidth="471.0" style="-fx-background-color: ;" text="hi " textAlignment="CENTER">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="quitButton" layoutX="345.0" layoutY="404.0" mnemonicParsing="false" onMouseClicked="#onQuitButton" prefHeight="59.0" prefWidth="124.0" text="QUIT">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

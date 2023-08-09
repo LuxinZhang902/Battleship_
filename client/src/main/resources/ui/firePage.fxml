@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="battleship.controller.FirePageController">
+   <children>
+      <ImageView fitHeight="763.0" fitWidth="924.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pic/paper.jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="boardTextView" prefHeight="600.0" prefWidth="924.0">
+         <children>
+            <Label fx:id="playerInfo" layoutX="260.0" layoutY="50.0" prefHeight="28.0" prefWidth="452.0" text="Label" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="waitInfo" layoutX="798.0" layoutY="562.0" text="Waiting..." visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userInput" layoutX="497.0" layoutY="558.0" onAction="#getUserInput" prefHeight="28.0" prefWidth="106.0" promptText="i.e A0" />
+            <Label layoutX="154.0" layoutY="560.0" text="Enter the Coordinate You Want to Fire At:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="doneButton" layoutX="649.0" layoutY="543.0" mnemonicParsing="false" onMouseClicked="#onDoneButton" prefHeight="43.0" prefWidth="106.0" text="Done">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <GridPane fx:id="gridPane" layoutX="170.0" layoutY="55.0" prefHeight="415.0" prefWidth="628.0">
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

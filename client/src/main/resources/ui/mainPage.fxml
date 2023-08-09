@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="battleship.controller.MainPageController">
+   <children>
+      <ImageView fitHeight="763.0" fitWidth="924.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pic/paper.jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="boardTextView" prefHeight="600.0" prefWidth="924.0">
+         <children>
+            <AnchorPane fx:id="resultPane" layoutX="59.0" layoutY="71.0" prefHeight="500.0" prefWidth="770.0">
+               <children>
+                  <AnchorPane layoutX="104.0" layoutY="450.0" prefHeight="100.0" prefWidth="500.0">
+                     <children>
+                        <RadioButton fx:id="fire" layoutX="6.0" layoutY="28.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="85.0" text="Fire">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Action" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="move" layoutX="176.0" layoutY="28.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="104.0" text="Move" toggleGroup="$Action">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="sonar" layoutX="357.0" layoutY="28.0" mnemonicParsing="false" text="Sonar" toggleGroup="$Action">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="nextButton" layoutX="624.0" layoutY="466.0" mnemonicParsing="false" onMouseClicked="#onNextButton" prefHeight="51.0" prefWidth="104.0" text="NEXT">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Button>
+                  <GridPane fx:id="gridPane" layoutX="142.0" layoutY="-8.0" prefHeight="415.0" prefWidth="628.0">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <Label fx:id="playerInfo" layoutX="261.0" layoutY="43.0" prefHeight="28.0" prefWidth="452.0" text="Label" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="waitInfo" layoutX="186.0" layoutY="610.0" text="Waiting for the Other Player To Finish Placement..." visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
